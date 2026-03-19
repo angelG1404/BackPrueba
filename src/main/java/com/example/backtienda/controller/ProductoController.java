@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.example.backtienda.model.*;
 import com.example.backtienda.services.*;
 import java.util.*;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class ProductoController {
 	private final ProductoService productoServicio;
