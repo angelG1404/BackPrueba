@@ -19,7 +19,11 @@ public class ProductoService implements Base<Producto>{
 	}
 	public void modificar(int id,Producto objeto) {
 		Producto p = repo.findById(id).get();
-		p=objeto;
+
+		p.setNombre(objeto.getNombre());
+		p.setDescripcion(objeto.getDescripcion());
+		p.setPrecio(objeto.getPrecio());
+
 		repo.save(p);
 	}
 	public void eliminar(int idObjeto) {
